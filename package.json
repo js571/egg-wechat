@@ -48,6 +48,7 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov && npm run prepublishOnly",
     "build": "tsc -p ./tsconfig.json",
+    "build:watch": "tsc -p ./tsconfig.json --watch",
     "clean": "tsc --build --clean",
     "prepublishOnly": "npm run clean && npm run build",
     "release": "release-it"
