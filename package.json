@@ -1,0 +1,68 @@
+{
+  "name": "@xw-tech/egg-wechat",
+  "version": "1.0.0",
+  "description": "wxxy-egg-plugin",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "eggPlugin": {
+    "name": "wechat"
+  },
+  "files": [
+    "config/*.js",
+    "lib/*.js",
+    "agent.js",
+    "app.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "tbk"
+  ],
+  "devDependencies": {
+    "@eggjs/tsconfig": "^1.3.2",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.14.6",
+    "egg": "^3.15.0",
+    "egg-bin": "^6.1.2",
+    "egg-mock": "^5.10.6",
+    "eslint": "^8.16.0",
+    "eslint-config-egg": "^12.1.0",
+    "git-contributor": "^0.1.0",
+    "tsd": "^0.26.0",
+    "typescript": "^4.9.5",
+    "release-it": "^17.10.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "contributor": "git-contributor",
+    "tsd": "tsd",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov && npm run prepublishOnly",
+    "build": "tsc -p ./tsconfig.json",
+    "clean": "tsc --build --clean",
+    "prepublishOnly": "npm run clean && npm run build",
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/js571/egg-wechat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/js571/egg-wechat/issues"
+  },
+  "homepage": "https://github.com/js571/egg-wechat",
+  "author": "Maat",
+  "license": "MIT",
+  "dependencies": {
+    "@xw-tech/wechat-sdk": "^0.0.1"
+  }
+}
