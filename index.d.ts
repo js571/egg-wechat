@@ -1,30 +1,30 @@
-
-
-interface EggTbkClientOption {
-  appKey: string,
-  secret: string,
-  restUrl: string
+interface EggWechatClientOption {
+  prefix: string;
+  appKey: string;
+  secret: string;
+  client: string;
+  apiUrl: string;
+  partnerId: string;
+  domain: string;
 }
 
-interface EggTbkSDkClientsOption {
-  [clientName: string]: EggTbkClientOption;
+interface EggWechatSDkClientsOption {
+  [clientName: string]: EggWechatClientOption;
 }
 
-interface EggTbkConfig {
+interface EggWechatConfig {
   default?: object;
   app?: boolean;
   agent?: boolean;
-  client?: EggTbkClientOption;
-  clients?: EggTbkClientOption;
+  client?: EggWechatClientOption;
+  clients?: EggWechatClientOption;
 }
 
 declare module 'egg' {
   interface Application {
-    tbk: {
-      request: <T = any>(apiName: string, params: Record<string, any>) => Promise<T>;
-    }
+    wechat: any;
   }
   interface EggAppConfig {
-    tbk: EggTbkConfig;
+    wechat: EggWechatConfig;
   }
 }
