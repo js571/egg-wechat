@@ -1,3 +1,5 @@
+import Wechat from '@xw-tech/wechat-sdk';
+
 interface EggWechatClientOption {
   prefix: string;
   appKey: string;
@@ -22,7 +24,7 @@ interface EggWechatConfig {
 
 declare module 'egg' {
   interface Application {
-    wechat: any;
+    wechat: Wechat;
   }
   interface EggAppConfig {
     wechat: EggWechatConfig;
