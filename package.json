@@ -1,6 +1,6 @@
 {
   "name": "@xw-tech/egg-wechat",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "wxxy-egg-plugin",
   "publishConfig": {
     "access": "public",
@@ -64,6 +64,6 @@
   "author": "Maat",
   "license": "MIT",
   "dependencies": {
-    "@xw-tech/wechat-sdk": "^1.0.2"
+    "@xw-tech/wechat-sdk": "^1.0.4"
   }
 }
