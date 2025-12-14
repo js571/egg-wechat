@@ -1,6 +1,6 @@
 {
   "name": "@xw-tech/egg-wechat",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "wxxy-egg-plugin",
   "publishConfig": {
     "access": "public",
